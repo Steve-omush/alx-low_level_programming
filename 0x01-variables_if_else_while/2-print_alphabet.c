@@ -6,15 +6,13 @@
  */
 int main(void)
 {
-	 /* Get the character to be written */
-	 char alphabet = 'a';
+	char alphabet;
 
-	 /* Write the Character to stdout */
-	 for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-	 {
-		 putchar(alphabet);
-	 }
-	 putchar('\n');
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	{
+		putchar(alphabet);
+		putchar('\n');
+	}
 
-	 return (0);
+	return (0);
 }
