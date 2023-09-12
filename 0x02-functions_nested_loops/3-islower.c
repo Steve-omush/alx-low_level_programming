@@ -3,6 +3,7 @@
  * _islower - checks for lowercase character.
  * Returns 1 if c is lowercase
  * Returns 0 otherwise
+ * Description: function uses _putchar function to print
  */
 int _islower(int c)
 {
