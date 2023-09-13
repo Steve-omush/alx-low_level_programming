@@ -7,20 +7,20 @@
 int main(void)
 {
 	int i;
-	int a = 1, b = 2, sum = 2, next;
+	long int fibonacci[50], sum = 2;
+
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
 
 	for (i = 2; i < 50; i++)
 	{
-		next = a + b;
-		a = b;
-		b = next;
-
-		if ((next % 2) == 0 && next < 4000000)
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
 		{
-			sum += next;
+			sum += fibonacci[i];
 		}
 	}
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 
 	return (0);
 }
