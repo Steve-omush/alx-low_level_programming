@@ -18,7 +18,7 @@ void print_times_table(int n)
 			{
 				prod = i * j;
 
-				if (prod <= 9)
+				if (prod >= 0 && prod <= 9)
 				{
 					_putchar(',');
 					_putchar(' ');
