@@ -6,24 +6,23 @@
  */
 int main(void)
 {
-	int n = 50;
-	int a = 1, b = 2, i, nextTerm;
+	int i;
+	long int fibonacci[50];
 
-	printf("%d, %d, ", a, b);
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
 
-	for (i = 2; i < n; i++)
+	for (i = 2; i < 50; i++)
 	{
-		nextTerm = a + b;
-		a = b;
-		b = nextTerm;
-
-		if (nextTerm == 49)
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if (i == 49)
 		{
-			printf("%d\n", nextTerm);
+			printf("%ld\n", fibonacci[i]);
 		}
 		else
 		{
-			printf("%d, ", nextTerm);
+			printf("%ld, ", fibonacci[i]);
 		}
 	}
 
