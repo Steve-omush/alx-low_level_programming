@@ -2,7 +2,6 @@
 /**
  * print_most_numbers - prints numbers 0 to 9
  * Description: Do not print 2 and 4
- * Description: only use _putchar twice
  * Return: Nothing
  */
 void print_most_numbers(void)
