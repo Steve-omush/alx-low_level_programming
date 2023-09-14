@@ -4,6 +4,7 @@
  * print_square - prints a square
  * @size: size of square
  * Return: Nothing
+ * Description: Can only use _putchar to print. Use '#' to print square.
  */
 void print_square(int size)
 {
