@@ -9,32 +9,39 @@ void print_integer(int m);
  */
 void print_number(int n)
 {
-	if (n == 0)
-		_putchar('0');
-	else if (n < 0)
-	{
-		_putchar('-');
-		print_integer(n * -1);
-	}
-	else
-	{
-		print_integer(n);
-	}
-}
-/**
- * print_integer - function to print m
- * @m: input unsigned integer
- * Return: Nothing
- */
-void print_integer(int m)
-{
-	int i = 1000000000;
+	long m;
+	int c;
+	long num;
 
-	for (; i >= 1; i /= 10)
+	num = n;
+
+	if (num < 0)
 	{
-		if (m / i != 0)
+		num *= -1;
+		_putchar('-');
+	}
+
+	m = 1;
+	c = 1;
+	while (c)
+	{
+		if (num / (m * 10) > 0)
+			m *= 10;
+		else
+			c = 0;
+	}
+
+	while (num >= 0)
+	{
+		if (m == 1)
 		{
-			_putchar((m / i) % 10 + '0');
+			_putchar(num % 10 + '0');
+			num = -1;
+		}
+		else
+		{
+			_putchar((num / m % 10) + '0');
+			m /= 10;
 		}
 	}
 }
