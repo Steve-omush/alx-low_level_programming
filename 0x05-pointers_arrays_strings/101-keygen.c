@@ -11,14 +11,18 @@
  */
 int main(void)
 {
-	int pass_length = 10;
-	char list[300] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{}?";
-	int i;
+	int myrand;
+	int count;
+	int total;
 
 	srand(time(NULL));
-	for(i = 0; i < pass_length; i++)
+	for (count = 0, total = 2772; total > 122; count++)
 	{
-		printf("%c", list[rand() % (sizeof list - 1)]);
+		myrand = (rand() % 125) + 1;
+		printf("%c", myrand);
+		total -= myrand;
 	}
-	printf("\n");
+	printf("%c", total);
+
+	return (0);
 }
