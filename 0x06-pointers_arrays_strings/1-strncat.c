@@ -4,10 +4,12 @@
 #include <string.h>
 
 /**
- * _strncat - concatenates two strings
- * @dest: char pointer to a string
- * @src: char pointer that concatenates
- * @n: an input integer
+ * _strncat - function that concatenates two strings.
+ * @dest: char pointer which is a string
+ * @src: char pointer that appends
+ * @n: input integer
+ * Description: appends src to the dest
+ *
  * Return: pointer to the resulting string dest
  */
 char *_strncat(char *dest, char *src, int n)
