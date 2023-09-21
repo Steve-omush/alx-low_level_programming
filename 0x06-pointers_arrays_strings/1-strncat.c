@@ -3,12 +3,12 @@
 
 /**
  * _strncat - concatenates two strings.
- * @dest: char pointer which is a string
- * @src: char pointer that appends
+ * @dest: input string
+ * @src: input string
  * @n: input integer
  * Description: appends src to the dest
  *
- * Return: pointer to the resulting string dest
+ * Return: pointer to string dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -26,7 +26,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (n--)
 	{
-		if ( ! (*s1++ = *src++))
+		if (!(*s1++ = *src++))
 		{
 			return (dest);
 		}
