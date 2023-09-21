@@ -5,7 +5,7 @@ int separators (char s);
 
 /**
  * cap_string - capitalizes words of string
- * @s: inpout pointer string
+ * @c: input pointer string
  *
  * Return: c
  */
