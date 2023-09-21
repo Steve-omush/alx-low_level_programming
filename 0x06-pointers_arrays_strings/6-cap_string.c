@@ -1,45 +1,39 @@
 #include "main.h"
-#include <stdio.h>
-
-int separators (char s);
 
 /**
- * cap_string - capitalizes words of string
- * @c: input pointer string
+ * cap_string - capitalizes words
+ * @s: input string to capitalize
  *
- * Return: c
+ * Return: s
  */
-char *cap_string(char *c)
+char *cap_string(char *s)
 {
-	int i = 0;
+	int i, j;
+	int counter;
+	char separators[] = ",;.!?(){}\n\t\" ";
 
-	while (c[i])
+	for (i = 0, counter = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0 && (c[i] >= 'a' && c[i] <= 'z'))
-			c[i] -= 32;
+		if (s[0] > 96 && s[0] < 123)
+			counter = 1;
+		for (j = 0; separators[j] != '\0'; j++)
+		{
+			if (separators[j] == s[i])
+				counter = 1;
+		}
 
-		if (separators(c[i]) && (c[i + 1] >= 'a' && c[i + 1] <= 'z'))
-			c[i + 1] -= 32;
-		i++;
+		if (counter)
+		{
+			if (s[i] > 96 && s[i] < 123)
+			{
+				s[i] -= 32;
+				counter = 0;
+			}
+			else if (s[i] > 64 && s[i] < 91)
+				counter = 0;
+			else if (s[i] > 47 && s[i] < 58)
+				counter = 0;
+		}
 	}
-
-	return (c);
-}
-
-/**
- * separators - space, tabulation, new line
- * @s: input character
- * Return: 1 otherwise 0
- */
-int separators(char s)
-{
-	int i = 0;
-	char separators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}' };
-
-	for (; i < 13; i++)
-	{
-		if (s == separators[i])
-			return (1);
-	}
-	return (0);
+	return (s);
 }
