@@ -5,21 +5,23 @@
  * leet - encodes a string into 1337
  * @s: input string to encode
  *
- * Return: An encoded string
+ * Return: s
  */
 char *leet(char *s)
 {
-	int j = 0, i;
-	char num[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'}, letters[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	int i, j;
+	char str1[] = "aAeEoOtTlL";
+	char str2[] = "4433007711";
 
-	while (s[j])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; i < 10; i++)
-			if (s[j] == letters[i])
-				s[j] = num[i];
-
-		i++;
+		for (j = 0; j < 10; j++)
+		{
+			if (s[i] == str1[j])
+			{
+				s[i] = str2[j];
+			}
+		}
 	}
-
 	return (s);
 }
