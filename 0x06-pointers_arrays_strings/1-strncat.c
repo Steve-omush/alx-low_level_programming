@@ -7,6 +7,7 @@
  * _strncat - concatenates two strings
  * @dest: char pointer to a string
  * @src: char pointer that concatenates
+ * @n: an input integer
  * Return: pointer to the resulting string dest
  */
 char *_strncat(char *dest, char *src, int n)
@@ -17,10 +18,12 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		return NULL;
 	}
+
 	while (*s1 != '\0')
 	{
 		s1++;
 	}
+
 	while (n--)
 	{
 		if (!(*s1++ = *src++))
@@ -28,7 +31,7 @@ char *_strncat(char *dest, char *src, int n)
 			return (dest);
 		}
 	}
-	*s1 = '\0';
 
+	*s1 = '\0';
 	return (dest);
 }
