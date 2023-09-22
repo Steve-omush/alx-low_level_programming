@@ -9,19 +9,18 @@
  */
 char *rot13(char *s)
 {
-	char *encoded = s;
+	int i;
 
-	while (*s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if ((*s >= 'a' && *s <= 'm') || (*s >= 'A' && *s <= 'M'))
+		while ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			*s += 13;
+			if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
+				s[i] += 13;
+			else
+				s[i] -= 13;
+			i++;
 		}
-		else if ((*s >= 'n' && *s <= 'z') || (*s >= 'N' && *s <= 'Z'))
-		{
-			*s -= 13;
-		}
-		s++;
 	}
-	return (encoded);
+	return (s);
 }
