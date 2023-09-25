@@ -29,13 +29,14 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (!found_match)
-		{
-			break;
-		}
-		else
-		{
-			initial_length++;
-		}
+	}
+	if (!found_match)
+	{
+		break;
+	}
+	else
+	{
+		initial_length++;
+	}
 	return (initial_length);
 }
