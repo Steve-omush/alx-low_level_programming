@@ -12,31 +12,27 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned initial_length = 0;
-	unsigned i, j;
+	int i = 0;
+	int j;
+	int c = 0;
 
-	unsigned len1 = strlen(s);
-	unsigned len2 = strlen(accept);
-
-	for (i = 0; i < len1; i++)
+	while (s[i] != '\0')
 	{
-		bool found_match = false;
-		for (j = 0; j < len2; j++)
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (accept[j] == s[i])
+			if (s[i] == accept[j])
 			{
-				found_match = true;
+				c++;
 				break;
 			}
+			j++;
 		}
+		if (accept[j] == '\0')
+		{
+			break;
+		}
+		i++;
 	}
-	if (!found_match)
-	{
-		break;
-	}
-	else
-	{
-		initial_length++;
-	}
-	return (initial_length);
+	return (c);
 }
