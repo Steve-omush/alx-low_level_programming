@@ -50,12 +50,9 @@ bool _palindromerecursive(char *s, int begin, int end)
  */
 int _stringLength(char *s)
 {
-	int length = 0;
-
-	while (*s != '\0')
+	if (*s == '\0')
 	{
-		length++;
-		s++;
+		return (0);
 	}
-	return (length);
+	return (1 + _stringLength(s + 1));
 }
