@@ -8,7 +8,7 @@ int _stringLength(char *s);
  * is_palindrome - 1 if palindrome, otherwise 0
  * @s: input string
  *
- * Returns: 1 if palindrome, otherwise 0
+ * Return: 1 if palindrome, otherwise 0
  */
 int is_palindrome(char *s)
 {
@@ -43,7 +43,7 @@ bool _palindromerecursive(char *s, int begin, int end)
 }
 
 /**
- * _stringLength: get string Length
+ * _stringLength - get string Length
  * @s: input string
  *
  * Return: string length
