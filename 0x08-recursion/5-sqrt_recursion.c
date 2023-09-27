@@ -18,7 +18,7 @@ int _sqrt_recursion(int n)
 	{
 		return (1);
 	}
-	return _recursive(n, 0, n);
+	return (_recursive(n, 0, n));
 }
 
 /**
@@ -31,7 +31,7 @@ int _sqrt_recursion(int n)
  */
 int _recursive(int n, int lower, int upper)
 {
-	int mid, square;
+	long mid, square;
 
 	if (lower > upper)
 	{
