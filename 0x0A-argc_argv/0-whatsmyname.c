@@ -4,7 +4,7 @@
 /**
  * main - program that prints its name, followed by a new line
  * @argc: argument count
- * @argc: argument vector
+ * @argv: argument vector
  *
  * Return: Always 0 (Success)
  */
