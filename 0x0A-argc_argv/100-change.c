@@ -17,14 +17,14 @@ int main(int argc, char *argv[])
 	int num_coins;
 	int coin_count = 0;
 
-	cent = atoi(argv[1]);
-	num_coins = sizeof(coinValues) / sizeof(coinValues[0]);
-
 	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	cent = atoi(argv[1]);
+	num_coins = sizeof(coinValues) / sizeof(coinValues[0]);
 
 	if (cent < 0)
 	{
