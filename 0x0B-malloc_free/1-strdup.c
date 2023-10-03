@@ -18,7 +18,6 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	
 	len = 0;
 	temp = str;
 	while (*temp)
@@ -26,14 +25,12 @@ char *_strdup(char *str)
 		len++;
 		temp++;
 	}
-	
 	duplicate = (char *)malloc(len + 1);
 
 	if (duplicate == NULL)
 	{
 		return (NULL);
 	}
-	
 	d = duplicate;
 	temp = str;
 
