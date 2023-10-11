@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		if (start_index == num_bytes - 1)
 			continue;
 		printf(" ");
-		address ++;
+		address++;
 	}
 	printf("\n");
 	return (0);
