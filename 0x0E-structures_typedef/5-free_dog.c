@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_dog: deallocates memory
+ * free_dog - deallocates memory
  * @d: struct dog
  *
  * Return: Nothing
