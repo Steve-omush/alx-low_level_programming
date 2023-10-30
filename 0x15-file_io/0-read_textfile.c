@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints it to the POSIX stdout..
  * @filename: pointer of the file to be terminated.
  * @letters: numbers of letters to read and print.
  *
