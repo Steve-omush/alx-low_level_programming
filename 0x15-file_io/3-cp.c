@@ -21,7 +21,7 @@ void check_stat(int stat, int fd, char *filename, char mode);
 int main(int argc, char *argv[])
 {
 	int src, dest, n_read = BUFFER_SIZE, wrote, close_src, close_dest;
-	unsigned int mode = S_IRUSR | S_IWRUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	}
 	src = open(argv[1], O_RDONLY);
 	check_stat(src, -1, argv[1], 'O');
-	dest = open(agv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
+	dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	check_stat(dest, -1, argv[2], 'W');
 	while (n_read == 1024)
 	{
